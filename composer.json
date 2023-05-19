@@ -1,0 +1,17 @@
+{
+    "name": "thurein/app",
+    "description": "This is a simple project with php language.",
+    "authors": [
+        {
+            "name": "Thu Rein Lynn",
+            "email": "thurein.lynn@brycenmyanmar.com.mm"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Libs\\": "classes/Libs/",
+            "Helpers\\": "classes/Helpers/"
+        }
+    }
+}
