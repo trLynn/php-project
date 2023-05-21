@@ -29,7 +29,7 @@
         <form action="_actions/create.php" method="post">
             <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
             <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
-            <input type="address" name="phone" class="form-control mb-2" placeholder="Phone" required>
+            <input type="phone" name="phone" class="form-control mb-2" placeholder="Phone" required>
             <textarea name="address" class="form-control mb-2" placeholder="Address"></textarea>
             <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
             <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>

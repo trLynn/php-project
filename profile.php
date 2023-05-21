@@ -18,7 +18,7 @@ $auth = Auth::check();
     />
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container">
         <h1 class="mt-5 mb-5">
             <?= $auth->name ?>
             <span class="fw-normal text-muted">
@@ -34,9 +34,27 @@ $auth = Auth::check();
             <img class="img-thumbnail mb-3" src="_actions/photos/<?= $auth->photo ?>" alt="Profile Photo" width="200">
         <?php endif ?>
 
-        <form action="">
-            
+        <form action="_actions/upload.php" method="post" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="file" name="photo" class="form-control">
+                <button>Upload</button>
+            </div>
         </form>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b>Email:</b> <?= $auth->email ?>
+            </li>
+            <li class="list-group-item">
+                <b>Phone:</b> <?= $auth->phone ?>
+            </li>
+            <li class="list-group-item">
+                <b>Address:</b> <?= $auth->address ?>
+            </li>
+        </ul>
+        <br>
+        <a href="admin.php">Manage Users</a>
+        <a href="_actions/logout.php" class="text-danger">Logout</a>
     </div>
 </body>
 </html>
